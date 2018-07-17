@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>PS</title>
+    <!-- Icons-->
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+
+
+    <!-- Select 2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
+        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Software PV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-bell"></i>
+            <span class="badge badge-pill badge-danger">5</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Settings</a>
+            <div class="divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-lock"></i> Logout</a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="nav-icon icon-speedometer"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-title">Módulos</li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">
+                <i class="nav-icon fa fa-diamond"></i> Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">
+                <i class="nav-icon fa fa-user-o"></i> Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reports.html">
+                <i class="nav-icon fa fa-book"></i> Reportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="configurations.html">
+                <i class="nav-icon fa fa-cog"></i> Configuraciones</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Mis Productos</li>
+          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              <a class="btn" href="./">
+                <i class="icon-graph"></i>  Dashboard</a>
+            </div>
+          </li>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-1 text-center">
+                        <i class="fa icon-basket fa-2x"></i>
+                      </div>
+                      <div class="col-9 pr-0">
+                        <input type="text" class="form-control form-control-sm" value="leche" placeholder="Ingresa código  de producto a buscar">
+                      </div>
+                      <div class="col-2">
+                        <button type="button" class="btn btn-outline-primary btn-block btn-sm">Buscar</button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Código</th>
+                          <th>Nombre</th>
+                          <th>Categoría</th>
+                          <th>Disponible</th>
+                          <th>Status</th>
+                          <th>Precio</th>
+                          <th>Costo</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#remove">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary" >
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>XSLSB729SHK</td>
+                          <td>Leche de Caja</td>
+                          <td>Alimentos</td>
+                          <td>30</td>
+                          <td><span class="badge badge-success">Activo</span></td>
+                          <td>$19.90</td>
+                          <td>$12.50</td>
+                          <td>
+                            <button type="button" class="btn btn-sm btn-primary">
+                              <i class="fa fa-pencil-square-o"></i>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#">Prev</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row-->
+          </div>
+        </div>
+      </main>
+    </div>
+
+
+    <!-- /.modal-->
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-primary modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Editar Producto</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="pos-form" action="" method="post">
+              <div class="row">
+                <div class="form-group col-sm-6 mb-1">
+                  <label>Código</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="KJAJHGFSJHGF927...">
+                </div>
+                <div class="form-group col-sm-6 mb-1">
+                  <label for="vat">Nombre</label>
+                  <input class="form-control form-control-sm" id="vat" type="text" placeholder="Inserta el nombre del producto">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-12 mb-1">
+                  <label for="street">Descripción</label>
+                  <input class="form-control form-control-sm" id="street" type="text" placeholder="Inserta una breve descripción">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-4 mb-1">
+                  <label for=" col-sm-12">
+                    Categoría
+                  </label>
+                  <div class="col-sm-12 p-0">
+                    <select class="js-example-basic-single js-states form-control form-control-sm " style="width: 100%" id="id_label_single">
+                      <option value="0">Selecciona una opción</option>
+                      <option value="1">Hogar</option>
+                      <option value="1">Autos</option>
+                      <option value="1">Farmacia</option>
+                      <option value="1">Salud</option>
+                      <option value="1">Alimentos</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-sm-4 mb-1">
+                  <label for=" col-sm-12">
+                    Status
+                  </label>
+                  <div class="col-sm-12 p-0">
+                    <select class="js-example-basic-single js-states form-control form-control-sm " style="width: 100%" id="id_label_single">
+                      <option value="0">Selecciona una opción</option>
+                      <option value="1">Activo</option>
+                      <option value="1">Inactivo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-sm-4 mb-1">
+                  <label for="postal-code">Disponible</label>
+                  <input class="form-control form-control-sm" id="postal-code" type="number" placeholder="0">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-6 mb-1">
+                  <label class="col-form-label" for="prependedInput">Precio</label>
+                  <div class="controls">
+                    <div class="input-prepend input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-usd"></i></span>
+                      </div>
+                      <input class="form-control form-control-sm" id="prependedInput" size="16" type="number">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-sm-6 mb-1">
+                  <label class="col-form-label" for="prependedInput">Costo</label>
+                  <div class="controls">
+                    <div class="input-prepend input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-usd"></i></span>
+                      </div>
+                      <input class="form-control form-control-sm" id="prependedInput" size="16" type="number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary" type="button">Guardar</button>
+          </div>
+        </div>
+        <!-- /.modal-content-->
+      </div>
+      <!-- /.modal-dialog-->
+    </div>
+
+    <!-- /.modal-->
+    <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">¿Deseas remover el producto?</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Leche Descremada 1L</strong></li>
+              <li class="list-group-item">Disponible:  <small>20</small></li>
+              <li class="list-group-item">Categoría: <small>Alimentos</small></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Remover</button>
+          </div>
+        </div>
+        <!-- /.modal-content-->
+      </div>
+      <!-- /.modal-dialog-->
+    </div>
+
+
+
+    <footer class="app-footer">
+      <div>
+        <a href="https://coreui.io">CoreUI</a>
+        <span>&copy; 2018 creativeLabs.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+      });
+    </script>
+  </body>
+</html>
