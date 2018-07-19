@@ -101,7 +101,7 @@
       <main class="main">
         <!-- Breadcrumb-->
         <ol class="breadcrumb">
-          <li class="breadcrumb-item">Usuarios</li>
+          <li class="breadcrumb-item">Cajas</li>
           <!-- Breadcrumb Menu-->
           <li class="breadcrumb-menu d-md-down-none">
             <div class="btn-group" role="group" aria-label="Button group">
@@ -116,41 +116,27 @@
               <div class="col-lg-12">
                 <div class="card">
                   <div class="card-header">
-                    <div class="row">
-                      <div class="col-1 text-center">
-                        <i class="fa fa-user-o fa-2x"></i>
-                      </div>
-                      <div class="col-7 pr-0">
-                        <input type="text" class="form-control form-control-sm" value="" placeholder="Ingresa el nombre del Usuario">
-                      </div>
-                      <div class="col-2">
-                        <button type="button" class="btn btn-outline-primary btn-block btn-sm">Buscar</button>
-                      </div>
-                      <div class="col-2">
-                          <button class="btn btn-success btn-sm btn-block" data-toggle="modal" data-target="#edit">
-                              <i class="fa fa-plus"></i> Agregar Caja
-                            </button>
-                      </div>
-                    </div>
-
+                    <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit">
+                      <i class="fa fa-plus"></i> Agregar Caja
+                    </button>
                   </div>
                   <div class="card-body">
                     <table class="table table-responsive-sm table-bordered">
                       <thead>
                         <tr>
                           <th>Nombre</th>
-                          <th>Rol</th>
-                          <th>Correo Electrónico</th>
+                          <th>Codigo</th>
+                          <th>Encargado</th>
                           <th>Status</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
+                          <td>Caja Principal</td>
+                          <td>123ka12</td>
                           <td>Eduardo Canizales</td>
-                          <td>Gerente</td>
-                          <td>eduardo@mail.com</td>
-                          <td><span class="badge badge-success">Activo</span></td>
+                          <td><span class="badge badge-success"><i class="fa fa-check"></i>  Abierta</span></td>
                           <td>
                             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
                               <i class="fa fa-pencil-square-o"></i>
@@ -161,70 +147,22 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Antonio Grageda</td>
-                          <td>Cajero</td>
-                          <td>antonio@mail.com</td>
-                          <td><span class="badge badge-success">Activo</span></td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
-                              <i class="fa fa-pencil-square-o"></i>
-                            </button>
-                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#remove">
-                              <i class="fa fa-trash-o"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Sofía Reyes</td>
-                          <td>Cajero</td>
-                          <td>sofia@mail.com</td>
-                          <td><span class="badge badge-danger">Inactivo</span></td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
-                              <i class="fa fa-pencil-square-o"></i>
-                            </button>
-                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#remove">
-                              <i class="fa fa-trash-o"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Rafael Sánchez</td>
-                          <td>Administrador</td>
-                          <td>rafael@mail.com</td>
-                          <td><span class="badge badge-success">Activo</span></td>
-                          <td>
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
-                              <i class="fa fa-pencil-square-o"></i>
-                            </button>
-                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#remove">
-                              <i class="fa fa-trash-o"></i>
-                            </button>
-                          </td>
-                        </tr>
+                            <td>Caja secundaria</td>
+                            <td>123ka12</td>
+                            <td>Eduardo Canizales</td>
+                            <td><span class="badge badge-danger"><i class="fa fa-times"></i>  Cerrada</span></td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit">
+                                <i class="fa fa-pencil-square-o"></i>
+                              </button>
+                              <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#remove">
+                                <i class="fa fa-trash-o"></i>
+                              </button>
+                            </td>
+                          </tr>
                         
                       </tbody>
                     </table>
-                    <ul class="pagination">
-                      <li class="page-item">
-                        <a class="page-link" href="#">Prev</a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">4</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -241,7 +179,7 @@
       <div class="modal-dialog modal-primary modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Editar Usuario</h4>
+            <h4 class="modal-title">Editar Caja</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -251,46 +189,40 @@
               <div class="row">
                 <div class="form-group col-sm-6 mb-1">
                   <label>Nombre</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="Nombre del empleado">
+                  <input class="form-control form-control-sm" type="text" placeholder="Nombre">
                 </div>
                 <div class="form-group col-sm-6 mb-1">
-                  <label for="vat">Nombre</label>
-                  <input class="form-control form-control-sm" id="vat" type="text" placeholder="Inserta el nombre del producto">
+                  <label for="vat"> Código</label>
+                  <input class="form-control form-control-sm" id="vat" type="text" placeholder="Código..">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-sm-12 mb-1">
-                  <label for="street">Apellidos</label>
-                  <input class="form-control form-control-sm" id="street" type="text" placeholder="Inserta los apellidos del usuario">
+                    <label for=" col-sm-12">
+                        Encargado
+                      </label>
+                      <div class="col-sm-12 p-0">
+                        <select class="js-example-basic-single-2 js-states form-control form-control-sm " style="width: 100%" id="id_label_single">
+                          <option value="0">Selecciona una opción</option>
+                          <option value="1">Eduardo Canizales</option>
+                          <option value="1">Antonio Grageda</option>
+                          <option value="1">Rafael Sánchez</option>
+                        </select>
+                      </div>
                 </div>
               </div>
               <div class="row">
-                <div class="form-group col-sm-6 mb-1">
+                <div class="form-group col-sm-12 mb-1">
                   <label for=" col-sm-12">
-                    Rol
+                    Status
                   </label>
                   <div class="col-sm-12 p-0">
                     <select class="js-example-basic-single js-states form-control form-control-sm " style="width: 100%" id="id_label_single">
                       <option value="0">Selecciona una opción</option>
-                      <option value="1">Administrador</option>
-                      <option value="1">Gerente</option>
-                      <option value="1">Cajero</option>
+                      <option value="1">Abierta</option>
+                      <option value="1">Cerrada</option>
                     </select>
                   </div>
-                </div>
-                <div class="form-group col-sm-6 mb-1">
-                  <label for="postal-code">Correo Electrónico</label>
-                  <input class="form-control form-control-sm" id="postal-code" type="email" placeholder="0">
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-sm-6 mb-1">
-                  <label>Contraseña de acceso</label>
-                  <input class="form-control form-control-sm" type="password" placeholder="*******">
-                </div>
-                <div class="form-group col-sm-6 mb-1">
-                  <label for="vat">Confirmación de contraseña de acceso</label>
-                  <input class="form-control form-control-sm" id="vat" type="password" placeholder="*********">
                 </div>
               </div>
             </form>
@@ -310,15 +242,15 @@
       <div class="modal-dialog modal-danger" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">¿Deseas dar de baja el usuario?</h4>
+            <h4 class="modal-title">¿Deseas dar de baja la caja?</h4>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Eduardo Canizales</strong></li>
-              <li class="list-group-item">Rol:  <small>Gerente</small></li>
+              <li class="list-group-item"><strong>Caja Principal</strong></li>
+              <li class="list-group-item">Status:  <small>Abierta</small></li>
             </ul>
           </div>
           <div class="modal-footer">
@@ -359,6 +291,7 @@
     <script>
       $(document).ready(function() {
         $('.js-example-basic-single').select2();
+        $('.js-example-basic-single-2').select2();
       });
     </script>
   </body>
